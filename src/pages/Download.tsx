@@ -27,12 +27,12 @@ export function Download() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
-      <div className="container mx-auto p-4 text-center"> {/* Center text */}
-        <h1 className="text-2xl font-bold mb-4 text-orange-400">Download Video {videoTitle ? `- ${videoTitle}` : ''}</h1>
+      <div className="container mx-auto p-4 text-center">
+        <h1 className="text-2xl font-bold mb-4 text-purple-400">Download Video {videoTitle ? `- ${videoTitle}` : ''}</h1>
         {videoUrl ? (
           <button
             onClick={handleDownload}
-            className="bg-orange-500 text-white p-4 rounded flex items-center justify-center mx-auto hover:bg-orange-600 transition-colors shadow-lg"
+            className="bg-purple-500 text-white p-4 rounded flex items-center justify-center mx-auto hover:bg-purple-600 transition-colors shadow-lg"
           >
             <FaDownload className="mr-2" />
             Download Video

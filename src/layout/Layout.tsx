@@ -8,10 +8,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className="bg-orange-600 fixed top-0 left-0 w-full p-4 text-white flex items-center justify-between shadow-lg">
+      <header className="bg-purple-600 fixed top-0 left-0 w-full p-4 text-white flex items-center justify-between shadow-lg z-50">
         <div className="flex items-center">
-          <FaPlay className="mr-2" /> {/* Ikon play */}
-          <h1 className="text-xl font-bold">Videy Stream</h1> {/* Ukuran teks diperkecil dari text-2xl ke text-xl */}
+          <FaPlay className="mr-2" />
+          <h1 className="text-xl font-bold">DoodStream Videy</h1>
         </div>
         <a
           href="https://videhost.my.id"
@@ -19,17 +19,22 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaUpload /> {/* Ikon upload */}
+          <FaUpload />
           <span>Upload</span>
         </a>
       </header>
 
+      {/* Main Content */}
+      <main className="flex-1 bg-gray-900 text-white pt-20">
+        {children}
+      </main>
+
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white p-3 rounded-lg shadow-lg flex items-center justify-between space-x-4 w-[90%] max-w-3xl">
+        <div className="fixed bottom-20 sm:bottom-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white p-3 rounded-lg shadow-lg flex items-center justify-between space-x-4 w-[90%] max-w-3xl z-40">
           <div className="flex items-center space-x-3">
-            <FaDownload size={24} className="text-white" /> {/* Ikon APK */}
-            <span className="font-semibold">Install Videy Stream Apk</span>
+            <FaDownload size={24} className="text-white" />
+            <span className="font-semibold">Install DoodStream Videy Apk</span>
           </div>
           <Link
             to="https://github.com/AgungDevlop/Viral/raw/refs/heads/main/DoobStream.apk"
@@ -45,14 +50,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
       )}
 
-      {/* Main Content */}
-      <main className="flex-1 bg-gray-900 text-white pt-20">
-        {children}
-      </main>
-
       {/* Footer */}
-      <footer className="bg-orange-600 p-4 text-white text-center">
-        <p>© 2024 Videy Stream. All rights reserved.</p>
+      <footer className="bg-purple-600 p-4 text-white text-center">
+        <p>© 2024 DoodStream Videy. All rights reserved.</p>
       </footer>
     </div>
   );
