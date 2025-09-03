@@ -11,7 +11,7 @@ export function Download() {
     "https://meowadvertising.com/hc70ax5ct2?key=7df760c08ecfe3653c332fbdce13d42a",
     "https://superficial-work.com/ba3RV.0YPk3Xp/v/b/mOVsJHZqDV0Y0KO/DVQWzkOvD/MK3pLvT/QJ4JNmDyM/4MMozHgS"
   ];
-
+  
   const handleDownload = () => {
     if (videoUrl) {
       // Open the video URL in a new tab
@@ -28,11 +28,11 @@ export function Download() {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
       <div className="container mx-auto p-4 text-center">
-        <h1 className="text-2xl font-bold mb-4 text-purple-400">Download Video {videoTitle ? `- ${videoTitle}` : ''}</h1>
+        <h1 className="text-2xl font-bold mb-4 text-red-400">Download Video {videoTitle ? `- ${videoTitle}` : ''}</h1>
         {videoUrl ? (
           <button
             onClick={handleDownload}
-            className="bg-purple-500 text-white p-4 rounded flex items-center justify-center mx-auto hover:bg-purple-600 transition-colors shadow-lg"
+            className="bg-red-700 text-white p-4 rounded flex items-center justify-center mx-auto hover:bg-red-800 transition-colors shadow-lg"
           >
             <FaDownload className="mr-2" />
             Download Video

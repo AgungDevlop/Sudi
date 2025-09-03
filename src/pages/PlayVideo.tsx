@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaCopy, FaSearch, FaDownload } from 'react-icons/fa';
+import { FaCopy, FaSearch, FaDownload, FaPlay } from 'react-icons/fa';
 
 // Tambahkan deklarasi global untuk properti fluidPlayer pada objek window
 declare global {
@@ -8,6 +8,7 @@ declare global {
     fluidPlayer?: (elementId: string, options?: any) => void;
   }
 }
+
 
 export function PlayVideo() {
   const { id } = useParams<{ id: string }>();
@@ -22,7 +23,7 @@ export function PlayVideo() {
   const videosPerPage = 10;
 
   // Array URL video dasar
-  const videoBaseUrls = ['https://videx.doobs.top/e/'];
+  const videoBaseUrls = ['https://videv.doobs.top/e/'];
 
   // Array URL untuk pop-under
   const randomUrls = [
@@ -155,7 +156,7 @@ export function PlayVideo() {
   return (
     <div className="container mx-auto max-w-3xl p-4 sm:p-6 bg-gray-900 text-white">
       <div className="bg-gray-800 p-4 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold mb-4 text-center break-words text-purple-400">{videoTitle}</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center break-words text-red-400">{videoTitle}</h1>
 
         <div className="mb-4 w-full aspect-video rounded-lg overflow-hidden shadow-lg border border-gray-700 flex items-center justify-center bg-black">
           <video id="video-id" className="w-full h-full object-contain" preload="metadata">
@@ -166,7 +167,7 @@ export function PlayVideo() {
 
         <div className="flex mb-4 border border-gray-700 rounded-lg overflow-hidden">
           <input type="text" value={`https://${window.location.hostname}/${id}`} readOnly className="flex-1 p-3 bg-gray-900 text-white outline-none" />
-          <button onClick={handleCopy} className="bg-purple-500 hover:bg-purple-600 transition-colors text-white p-3">
+          <button onClick={handleCopy} className="bg-red-700 hover:bg-red-800 transition-colors text-white p-3">
             <FaCopy />
           </button>
         </div>
@@ -178,7 +179,7 @@ export function PlayVideo() {
 
         <div className="flex mb-4 border border-gray-700 rounded-lg overflow-hidden">
           <input type="text" placeholder="Cari video..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex-1 p-3 bg-gray-900 text-white outline-none" />
-          <button onClick={() => handlePageChange(1)} className="bg-purple-500 hover:bg-purple-600 transition-colors text-white p-3">
+          <button onClick={() => handlePageChange(1)} className="bg-red-700 hover:bg-red-800 transition-colors text-white p-3">
             <FaSearch />
           </button>
         </div>
@@ -189,12 +190,15 @@ export function PlayVideo() {
             <div
               key={video.id}
               onClick={() => handleCardClick(video.id)}
-              className="border border-gray-700 p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all shadow-md cursor-pointer flex items-center gap-4"
+              className="group border border-gray-700 p-3 rounded-lg bg-gray-800 hover:bg-red-900/40 transition-all shadow-md cursor-pointer flex items-center gap-4"
             >
-              <div className="w-32 h-20 sm:w-40 sm:h-24 rounded-md overflow-hidden flex-shrink-0 bg-black">
+              <div className="relative w-32 h-20 sm:w-40 sm:h-24 rounded-md overflow-hidden flex-shrink-0 bg-black">
                 <video className="w-full h-full object-cover" preload="metadata" muted>
                   <source src={video.Url} type="video/mp4" />
                 </video>
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <FaPlay className="text-white text-3xl" />
+                </div>
               </div>
               <div className="flex-1 overflow-hidden">
                 <h2 className="text-white font-medium text-sm sm:text-base truncate">{video.Judul}</h2>
