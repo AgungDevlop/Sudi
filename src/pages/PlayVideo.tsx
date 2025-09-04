@@ -27,7 +27,7 @@ export function PlayVideo() {
 
   // Array URL untuk pop-under
   const randomUrls = [
-    'https://otieu.com/4/9814549',
+    'https://obqj2.com/4/9587058',
     'https://malakingannets.com/ic4wSTmH5JgaK77X/94691',
     'https://aviatorreproducesauciness.com/2082665',
     'https://superficial-work.com/ba3RV.0YPk3Xp/v/b/mOVsJHZqDV0Y0KO/DVQWzkOvD/MK3pLvT/QJ4JNmDyM/4MMozHgS'
