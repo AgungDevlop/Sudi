@@ -14,7 +14,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <h1 className="text-xl font-bold">Lokalan Indo Terupdate</h1>
         </div>
         <a
-          href="https://videhost.my.id"
+          href="https://viplay.top/"
           className="bg-gray-800 text-white px-3 py-1 rounded flex items-center space-x-2 hover:bg-gray-700 transition-colors"
           target="_blank"
           rel="noopener noreferrer"
