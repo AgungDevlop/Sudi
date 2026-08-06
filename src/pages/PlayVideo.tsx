@@ -28,7 +28,7 @@ export function PlayVideo() {
   // Array URL untuk pop-under
   const randomUrls = [
     'https://dulyhagglermounting.com/2082665',
-    'https://viiukuhe.com/dc/?blockID=427841'
+    'https://wwp.giriucat.com/redirect-zone/5137a848'
   ];
 
   useEffect(() => {
