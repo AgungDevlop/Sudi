@@ -7,7 +7,7 @@ export function Download() {
   // Array of URLs for pop-under links
   const randomUrls = [
     'https://dulyhagglermounting.com/2082665',
-    'https://sorrowfulpsychology.com/HE9TFh'
+    'https://bmadss.com/get/?spot_id=2026313&cat=25&subid=1576043020'
     ];
   
   const handleDownload = () => {
